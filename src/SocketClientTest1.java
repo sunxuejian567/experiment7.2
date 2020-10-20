@@ -14,7 +14,7 @@ public class SocketClientTest1 {
             Thread cliSend = new ClientSend(socket);
             cliSend.start();
             cliReceive.start();
-            socket.close();
+
         } catch (Exception e) {
             System.out.println(e.toString());
         }

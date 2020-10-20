@@ -70,7 +70,7 @@ public class ProcessServer extends Thread {
     public void sendMsg2Me(String msg, String name) {
         try {
 
-            outputStream.writeUTF(this.name + msg);
+            outputStream.writeUTF(this.name+":" + msg);
 
         } catch (Exception e) {
             System.out.println(e.toString());

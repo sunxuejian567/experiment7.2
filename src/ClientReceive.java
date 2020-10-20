@@ -33,7 +33,7 @@ public class ClientReceive extends Thread {
                 System.out.println("Entry the chat room successfully!");
                 while (true) {
                     lrSockeString3 = inputStream.readUTF();
-                    System.out.println("lrSockeString3:" + lrSockeString3);
+                    System.out.println(lrSockeString3);
                     if (lrSockeString3.equals("Quit the chat room successfully")) {
                         System.out.println("Quit the chat room successfully!");
                         System.exit(1);
