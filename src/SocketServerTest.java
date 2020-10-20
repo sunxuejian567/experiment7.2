@@ -6,7 +6,7 @@ public class SocketServerTest {
         ServerSocket serverSocket = new ServerSocket(55536);
         /**
          * 若有连接到来,则创建一个ProcessServer线程,
-         * 并把该线程加入到ProcessCommunication中的线程消息共享队列
+         * 并把该线程加入到ProcessCommunication中的线程消息转发队列
          */
         try {
 
