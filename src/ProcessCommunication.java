@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * 用于线程交流的类,只提供函数调用,不需要实例化,所以构造函数私有
+ * 用于线程消息转发的类,只提供函数调用,不需要实例化,所以构造函数私有
  *
  * @author Xueji
  */
