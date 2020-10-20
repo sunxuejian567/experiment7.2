@@ -10,10 +10,10 @@ public class SocketClientTest1 {
          */
         try {
             Socket socket = new Socket("127.0.0.1", 55536);
-                Thread cliReceive = new ClientReceive(socket);
-                Thread cliSend = new ClientSend(socket);
-                cliReceive.start();
-                cliSend.start();
+            Thread cliReceive = new ClientReceive(socket);
+            Thread cliSend = new ClientSend(socket);
+            cliSend.start();
+            cliReceive.start();
             socket.close();
         } catch (Exception e) {
             System.out.println(e.toString());

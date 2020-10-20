@@ -15,7 +15,7 @@ public class ClientSend extends Thread {
     public ClientSend(Socket soc) {
         try {
             socket = soc;
-            DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
+            outputStream = new DataOutputStream(socket.getOutputStream());
         } catch (Exception e) {
             System.out.println(e.toString());
         }
@@ -26,15 +26,17 @@ public class ClientSend extends Thread {
      */
     @Override
     public void run() {
-        while (true) {
+
             try {
+                while (true) {
                 String lrSocketString2 = in.readLine();
                 outputStream.writeUTF(lrSocketString2);
+                }
             } catch (Exception e) {
 
                 e.printStackTrace();
             }
-        }
+
 
     }
 }

@@ -8,12 +8,12 @@ import java.net.Socket;
  */
 public class ClientReceive extends Thread {
     Socket socket;
-    DataInputStream inputStream = null;
+    DataInputStream inputStream;
 
     public ClientReceive(Socket soc) {
         try {
             socket = soc;
-            DataInputStream inputStream = new DataInputStream(socket.getInputStream());
+            inputStream = new DataInputStream(socket.getInputStream());
         } catch (Exception e) {
             System.out.println(e.toString());
         }
@@ -44,8 +44,6 @@ public class ClientReceive extends Thread {
                 System.exit(1);
             }
         } catch (Exception e) {
-
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
